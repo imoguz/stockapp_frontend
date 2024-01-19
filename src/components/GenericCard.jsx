@@ -20,7 +20,7 @@ const GenericCard = ({ setOpen, setInitialForm, item, stockName }) => {
       <CardMedia
         component={"img"}
         sx={{ height: 140, objectFit: "contain", boxShadow: 1, p: 1 }}
-        image={image ? `${imageURL + image}` : noimage}
+        image={image ? imageURL + image : noimage}
         title={name}
       />
       <CardContent>
