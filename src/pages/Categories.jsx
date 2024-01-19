@@ -17,9 +17,14 @@ const Categories = () => {
   useEffect(() => {
     const readStockData = async () => {
       await readStock("categories");
-      setCategoryData(categories);
     };
+
     readStockData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    setCategoryData(categories);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categories]);
 
