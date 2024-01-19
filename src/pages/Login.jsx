@@ -45,7 +45,7 @@ export default function Login() {
     },
   });
   return (
-    <Container component="main" maxWidth="xs" className="minheight2">
+    <Container maxWidth="xs">
       <Box
         sx={{
           pt: 5,
@@ -54,12 +54,26 @@ export default function Login() {
           alignItems: "center",
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+        <Avatar sx={{ bgcolor: "secondary.main" }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
+        <Box position="relative" width="100%">
+          <img
+            height="120"
+            width="100%"
+            src="/stockimage.png"
+            alt="stockImage"
+          />
+          <Typography
+            variant="caption"
+            sx={{ position: "absolute", bottom: 5, right: 2, color: "#ffffff" }}
+          >
+            Stock Management App
+          </Typography>
+        </Box>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
             margin="normal"

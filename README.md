@@ -37,7 +37,7 @@ Contributions to the project are welcome. If you have suggestions or improvement
 
 ### Demo
 
-Access the live demo of the project [here](https://stockapp-green.vercel.app/).
+Access the live demo of the project [here](https://stockapp-frontend-phi.vercel.app/).
 
 ### Contact
 

@@ -21,10 +21,6 @@ export default function Dashboard() {
 
   useEffect(() => {
     const readStockData = async () => {
-      await readStock("firms");
-      await readStock("brands");
-      await readStock("products");
-      await readStock("categories");
       await readStock("purchases");
       await readStock("sales");
     };

@@ -52,18 +52,32 @@ export default function Login() {
     <Container component="main" maxWidth="xs" className="minheight2">
       <Box
         sx={{
-          pt: 5,
+          pt: { xs: 1, sm: 4 },
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
         }}
       >
-        <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
+        <Avatar sx={{ bgcolor: "secondary.main" }}>
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Sign Up
         </Typography>
+        <Box position="relative" width="100%">
+          <img
+            height="100"
+            width="100%"
+            src="/stockimage.png"
+            alt="stockImage"
+          />
+          <Typography
+            variant="caption"
+            sx={{ position: "absolute", bottom: 5, right: 2, color: "#ffffff" }}
+          >
+            Stock Management App
+          </Typography>
+        </Box>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6} mb={1}>
@@ -117,8 +131,9 @@ export default function Login() {
               />
               <Box>
                 <Button
-                  sx={{ width: 190, height: 40 }}
+                  sx={{ width: 190, height: 39 }}
                   component="label"
+                  size="small"
                   variant="outlined"
                   startIcon={<CloudUploadIcon />}
                 >

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import GenericCard from "../components/GenericCard";
 import GenericModal from "../components/GenericModal";
 import { Grid, Typography, Button, Box } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import useStock from "../hooks/useStock";
 
 const Firms = () => {
   const [open, setOpen] = useState(false);
@@ -15,6 +16,16 @@ const Firms = () => {
   });
   const { firms } = useSelector((store) => store.stock);
   const stockName = "firms";
+
+  const { readStock } = useStock();
+
+  useEffect(() => {
+    const readStockData = async () => {
+      await readStock("firms");
+    };
+    readStockData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <>
